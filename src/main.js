@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { writeFileSync, readFileSync } = require('fs')
+const { writeFileSync, readFileSync } = require('fs');
 const puppeteer = require('puppeteer');
 const jsdom = require('jsdom');
 const nodeFetch = require('node-fetch');
@@ -38,10 +38,10 @@ const runTask = async () => {
         houses.forEach(({
             path,
             income,
-            residentsAge0to14Percentage,
-            residentsAge15to24Percentage,
-            residentsAge25to44Percentage,
-            residentsAge45to64Percentage,
+            residentsAge0to14,
+            residentsAge15to24,
+            residentsAge25to44,
+            residentsAge45to64,
             residentsAge65AndOlder,
             householdsWithChildren,
             shareOfMorocco,
@@ -61,10 +61,10 @@ const runTask = async () => {
 residentsIncome: **${income}**
 neighbourhoodName: **${neighbourhoodName}**
 municipalityName: **${municipalityName}**
-residentsAge0to14Percentage: **${residentsAge0to14Percentage}**
-residentsAge15to24Percentage: **${residentsAge15to24Percentage}**
-residentsAge25to44Percentage: **${residentsAge25to44Percentage}**
-residentsAge45to64Percentage: **${residentsAge45to64Percentage}**
+residentsAge0to14: **${residentsAge0to14}**
+residentsAge15to24: **${residentsAge15to24}**
+residentsAge25to44: **${residentsAge25to44}**
+residentsAge45to64: **${residentsAge45to64}**
 residentsAge65AndOlder: **${residentsAge65AndOlder}**
 householdsWithChildren: **${householdsWithChildren}**
 residentsCount: **${residentsCount}**
@@ -145,10 +145,10 @@ const runPuppeteer = async (url) => {
                     extraDetails = {
                         ...extraDetails,
                         income,
-                        residentsAge0to14Percentage: neighbourhoodData['k_0Tot15Jaar_8'].value,
-                        residentsAge15to24Percentage: neighbourhoodData['k_15Tot25Jaar_9'].value,
-                        residentsAge25to44Percentage: neighbourhoodData['k_25Tot45Jaar_10'].value,
-                        residentsAge45to64Percentage: neighbourhoodData['k_45Tot65Jaar_11'].value,
+                        residentsAge0to14: neighbourhoodData['k_0Tot15Jaar_8'].value,
+                        residentsAge15to24: neighbourhoodData['k_15Tot25Jaar_9'].value,
+                        residentsAge25to44: neighbourhoodData['k_25Tot45Jaar_10'].value,
+                        residentsAge45to64: neighbourhoodData['k_45Tot65Jaar_11'].value,
                         residentsAge65AndOlder: neighbourhoodData['k_65JaarOfOuder_12'].value,
                         householdsWithChildren: neighbourhoodData['HuishoudensMetKinderen_31'].value,
                         totalImmigrantsCount,
