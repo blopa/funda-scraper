@@ -54,11 +54,10 @@ const runTask = async () => {
             residentsCount,
             totalImmigrantsCount,
         }) => {
-            let text = `New house on ${date}: [click here](${path})`;
+            let text = `New apartment on ${date}: [click here](${path})`;
 
             if (income) {
                 let extraStuff = `
-residentsIncome: **${income}**
 neighbourhoodName: **${neighbourhoodName}**
 municipalityName: **${municipalityName}**
 residentsAge0to14: **${residentsAge0to14}**
@@ -70,10 +69,6 @@ householdsWithChildren: **${householdsWithChildren}**
 residentsCount: **${residentsCount}**
 totalImmigrantsCount: **${totalImmigrantsCount}**
 shareOfNonImmigrants: **${shareOfNonImmigrants}**
-shareOfMorocco: **${shareOfMorocco}**
-shareOfAntillesOrAruba: **${shareOfAntillesOrAruba}**
-shareOfSuriname: **${shareOfSuriname}**
-shareOfTurkey: **${shareOfTurkey}**
 `;
                 text = `${text}\n${extraStuff}`;
             }
