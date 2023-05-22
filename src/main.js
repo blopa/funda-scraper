@@ -16,8 +16,11 @@ const houses = [];
 const { CHAT_ID, BOT_API } = process.env;
 
 const urls = [
-    'https://www.funda.nl/en/huur/amsterdam/beschikbaar/0-2000/40+woonopp/1+slaapkamers/',
-    'https://www.funda.nl/en/huur/haarlem/beschikbaar/0-2000/40+woonopp/1+slaapkamers/',
+    'https://www.funda.nl/en/huur/amsterdam/beschikbaar/0-2000/40+woonopp/1+slaapkamers/30-dagen/energielabel-a/energielabel-b/',
+    'https://www.funda.nl/en/huur/haarlem/beschikbaar/0-2000/40+woonopp/1+slaapkamers/30-dagen/energielabel-a/energielabel-b/',
+    'https://www.funda.nl/en/huur/zaandam/beschikbaar/0-2000/40+woonopp/30-dagen/energielabel-a/energielabel-b/',
+    'https://www.funda.nl/en/huur/purmerend/beschikbaar/0-2000/40+woonopp/30-dagen/energielabel-a/energielabel-b/',
+    'https://www.funda.nl/en/huur/hoofddorp/beschikbaar/0-2000/40+woonopp/30-dagen/energielabel-a/energielabel-b/',
 ];
 
 const runTask = async () => {
