@@ -21,6 +21,7 @@ const urls = [
     'https://www.funda.nl/en/huur/zaandam/beschikbaar/0-2000/40+woonopp/30-dagen/energielabel-a/energielabel-b/',
     'https://www.funda.nl/en/huur/purmerend/beschikbaar/0-2000/40+woonopp/30-dagen/energielabel-a/energielabel-b/',
     'https://www.funda.nl/en/huur/hoofddorp/beschikbaar/0-2000/40+woonopp/30-dagen/energielabel-a/energielabel-b/',
+    'https://www.pararius.nl/huurwoningen/amsterdam/appartement/0-2000/1-slaapkamers/50m2',
 ];
 
 const runTask = async () => {
