@@ -15,9 +15,10 @@ jobs:
       
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.4.0
+        uses: actions/checkout@v2
         with:
-          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          ref: ${{ github.sha }}
 
       - name: Running
         run: |
