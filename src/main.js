@@ -144,7 +144,7 @@ const runPuppeteer = async (url) => {
                     extraDetails = {
                         ...extraDetails,
                         income,
-                        residentsAge0to14: neighbourhoodData['k_0Tot15Jaar_8'].value,
+                        residentsAge0to14 = neighbourhoodData?.['k_0Tot15Jaar_8']?.value || null,
                         residentsAge15to24: neighbourhoodData['k_15Tot25Jaar_9'].value,
                         residentsAge25to44: neighbourhoodData['k_25Tot45Jaar_10'].value,
                         residentsAge45to64: neighbourhoodData['k_45Tot65Jaar_11'].value,
