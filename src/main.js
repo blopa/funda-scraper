@@ -134,33 +134,33 @@ const runPuppeteer = async (url) => {
             if (zipCode) {
                 const neighbourhoodData = await getNeighbourhoodData(zipCode);
 
-                if (neighbourhoodData) {
-                    const residentsCount = neighbourhoodData?.['AantalInwoners_5']?.value || 0;
-                    const westernImmigrantsCount = neighbourhoodData?.['WestersTotaal_17']?.value || 0;
-                    const nonWesternImmigrantsCount = neighbourhoodData?.['NietWestersTotaal_18']?.value || 0;
-                    const totalImmigrantsCount = westernImmigrantsCount + nonWesternImmigrantsCount;
-                    const income = neighbourhoodData?.['GemiddeldInkomenPerInwoner_66']?.value * 1000;
+//                 if (neighbourhoodData) {
+//                     const residentsCount = neighbourhoodData?.['AantalInwoners_5']?.value || 0;
+//                     const westernImmigrantsCount = neighbourhoodData?.['WestersTotaal_17']?.value || 0;
+//                     const nonWesternImmigrantsCount = neighbourhoodData?.['NietWestersTotaal_18']?.value || 0;
+//                     const totalImmigrantsCount = westernImmigrantsCount + nonWesternImmigrantsCount;
+//                     const income = neighbourhoodData?.['GemiddeldInkomenPerInwoner_66']?.value * 1000;
 
-                    extraDetails = {
-                        ...extraDetails,
-                        income,
-                        residentsAge0to14: neighbourhoodData?.['k_0Tot15Jaar_8']?.value || null,
-                        residentsAge15to24: neighbourhoodData['k_15Tot25Jaar_9'].value,
-                        residentsAge25to44: neighbourhoodData['k_25Tot45Jaar_10'].value,
-                        residentsAge45to64: neighbourhoodData['k_45Tot65Jaar_11'].value,
-                        residentsAge65AndOlder: neighbourhoodData['k_65JaarOfOuder_12'].value,
-                        householdsWithChildren: neighbourhoodData['HuishoudensMetKinderen_31'].value,
-                        totalImmigrantsCount,
-                        shareOfMorocco: convertResidentsToPercentage(residentsCount, neighbourhoodData['Marokko_19'].value),
-                        shareOfAntillesOrAruba: convertResidentsToPercentage(residentsCount, neighbourhoodData['NederlandseAntillenEnAruba_20'].value),
-                        shareOfSuriname: convertResidentsToPercentage(residentsCount, neighbourhoodData['Suriname_21'].value),
-                        shareOfTurkey: convertResidentsToPercentage(residentsCount, neighbourhoodData['Turkije_22'].value),
-                        shareOfNonImmigrants: convertResidentsToPercentage(residentsCount, residentsCount - totalImmigrantsCount),
-                        neighbourhoodName: neighbourhoodData.neighbourhoodName.value,
-                        municipalityName: neighbourhoodData.municipalityName.value,
-                        residentsCount,
-                    };
-                }
+//                     extraDetails = {
+//                         ...extraDetails,
+//                         income,
+//                         residentsAge15to24: neighbourhoodData['k_15Tot25Jaar_8'].value,
+//                         residentsAge15to24: neighbourhoodData['k_15Tot25Jaar_9'].value,
+//                         residentsAge25to44: neighbourhoodData['k_25Tot45Jaar_10'].value,
+//                         residentsAge45to64: neighbourhoodData['k_45Tot65Jaar_11'].value,
+//                         residentsAge65AndOlder: neighbourhoodData['k_65JaarOfOuder_12'].value,
+//                         householdsWithChildren: neighbourhoodData['HuishoudensMetKinderen_31'].value,
+//                         totalImmigrantsCount,
+//                         shareOfMorocco: convertResidentsToPercentage(residentsCount, neighbourhoodData['Marokko_19'].value),
+//                         shareOfAntillesOrAruba: convertResidentsToPercentage(residentsCount, neighbourhoodData['NederlandseAntillenEnAruba_20'].value),
+//                         shareOfSuriname: convertResidentsToPercentage(residentsCount, neighbourhoodData['Suriname_21'].value),
+//                         shareOfTurkey: convertResidentsToPercentage(residentsCount, neighbourhoodData['Turkije_22'].value),
+//                         shareOfNonImmigrants: convertResidentsToPercentage(residentsCount, residentsCount - totalImmigrantsCount),
+//                         neighbourhoodName: neighbourhoodData.neighbourhoodName.value,
+//                         municipalityName: neighbourhoodData.municipalityName.value,
+//                         residentsCount,
+//                     };
+//                 }
             }
 
             newResults.add(path);
